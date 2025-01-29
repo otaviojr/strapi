@@ -303,7 +303,7 @@ module.exports = ({ strapi }) => ({
     }
 
     const { register } = strapi.config.get('plugin::users-permissions');
-    const alwaysAllowedKeys = ['username', 'password', 'email'];
+    const alwaysAllowedKeys = ['username', 'password', 'email', 'name'];
 
     // Note that we intentionally do not filter allowedFields to allow a project to explicitly accept private or other Strapi field on registration
     const allowedKeys = compact(
